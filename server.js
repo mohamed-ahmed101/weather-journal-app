@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+let projectData = {};
 
 const express = require('express');
 const PORT = process.env.PORT || 3000
