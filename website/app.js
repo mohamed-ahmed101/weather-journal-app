@@ -13,6 +13,7 @@ let getDate = () => {
 function _clickHandle() {
   const zipCode = document.getElementById('zip').value;
   const user_response = document.getElementById('feelings').value;
+  if (!user_response) return alert("Please Enter your feelings !!!");
   getCurrentWeather(openWeatherBaseURL, zipCode, apiKey)
     .then(temperature => {
       postUserData("addData", { temperature, date: getDate(), user_response });
