@@ -1,13 +1,13 @@
 /* Global Variables */
-let openWeatherBaseURL = 'http://api.openweathermap.org/data/2.5/weather?units=metric&zip=';
-let apiKey = '&appid=c7d9583e2cc781ea296a35ab652862f0';
-let weatherAppBaseUrl = "http://localhost:3000/";
+const openWeatherBaseURL = 'http://api.openweathermap.org/data/2.5/weather?units=metric&zip=';
+const apiKey = '&appid=c7d9583e2cc781ea296a35ab652862f0';
+const weatherAppBaseUrl = "http://localhost:3000/";
 
 document.getElementById('generate').addEventListener('click', _clickHandle);
 
 let getDate = () => {
   let d = new Date();
-  return (d.getMonth() + '-' + d.getDate() + '-' + d.getFullYear());
+  return ((d.getMonth() + 1) + '-' + d.getDate() + '-' + d.getFullYear());
 }
 
 function _clickHandle() {
